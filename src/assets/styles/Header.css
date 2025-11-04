@@ -1,0 +1,185 @@
+@import "../styles/colores.css";
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: var(--bg-secondary);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.35s ease;
+}
+
+/* ========= Animación Slide para Responsive ========= */
+@media(max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+}
+
+/* Profile */
+.name {
+  color: var(--text-main);
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  display: block;
+  margin: auto;
+}
+
+/* Links */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav a {
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.25s ease-in-out;
+}
+
+.nav a:hover {
+  background: var(--primary);
+  color: var(--text-main);
+  transform: translateX(6px);
+}
+
+/* Social links */
+.social {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social a {
+  color: var(--accent);
+  transition: 0.25s;
+}
+.social a:hover {
+  color: var(--primary);
+}
+
+/* ========== Botón Hamburguesa ========== */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 35px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  height: 4px;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Animación hamburguesa → X */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+/* Mostrar hamburguesa en móvil */
+@media(max-width: 900px) {
+  .menu-btn {
+    display: flex;
+  }
+}
+
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+
+  /* 🎨 Glassmorphism */
+  background: rgba(26, 26, 29, 0.55); /* var(--bg-secondary) pero con transparencia */
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0 16px 16px 0;
+
+  /* ✨ Glow sutil morado */
+  box-shadow: 4px 0 25px rgba(122, 63, 255, 0.28);
+
+  transition: transform 0.35s ease, background 0.3s ease;
+}
+
+@media(max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+    background: rgba(26, 26, 29, 0.60);
+    backdrop-filter: blur(14px) saturate(160%);
+  }
+}
+
+@media(max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+    background: rgba(26, 26, 29, 0.60);
+    backdrop-filter: blur(14px) saturate(160%);
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: var(--accent);
+  transition: 0.25s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+  transform: translateY(-4px) scale(1.1);
+  text-shadow: 0 0 10px rgba(122, 63, 255, 0.6);
+}

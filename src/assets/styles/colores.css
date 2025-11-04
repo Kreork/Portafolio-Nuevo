@@ -1,0 +1,13 @@
+:root {
+  /* Background */
+  --bg-main: #0B0B0D;
+  --bg-secondary: #1A1A1D;
+
+  /* Primary Palette */
+  --primary: #7A3FFF;
+  --accent: #B892FF;
+
+  /* Text */
+  --text-main: #F5F5F7;
+  --text-secondary: #A0A0B2;
+}
