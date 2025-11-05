@@ -77,6 +77,31 @@
   animation: cursorBlink .8s infinite steps(1);
 }
 
+/* Botón Hero */
+.hero-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(122, 63, 255, 0.4);
+  transform: translateY(-3px);
+}
+
 @keyframes cursorBlink {
   50% { border-color: transparent; }
 }
@@ -105,5 +130,10 @@
 
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+
+  .hero-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
   }
 }

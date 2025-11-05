@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  FaDownload, FaEnvelope, FaFileAlt, FaGithub,
+  FaEnvelope, FaFileAlt, FaGithub,
   FaHome, FaImages, FaLinkedin, FaUser
 } from "react-icons/fa";
 import FotoPerfil from "../assets/images/chris.jpg";
@@ -51,9 +51,6 @@ export default function Header() {
         </div>
 
         <nav className="nav">
-          <a href="/CV-Christian-Septiembre-2025.pdf" download>
-            <FaDownload className="icon" /> Descargar CV
-          </a>
           <a href="#hero" onClick={closeMenu} className={activeSection === "hero" ? "active" : ""}>
             <FaHome className="icon" /> Inicio
           </a>

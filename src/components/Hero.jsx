@@ -20,11 +20,8 @@ export default function Hero() {
   const [text, setText] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-
-  // estado para imagen
   const [bgIndex, setBgIndex] = useState(0);
 
-  // efecto typing
   useEffect(() => {
     const typingSpeed = 80;
     const pauseTime = 1200;
@@ -45,7 +42,6 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [charIndex, roleIndex]);
 
-  // efecto cambio de imagen cada 6s
   useEffect(() => {
     const timer = setInterval(() => {
       setBgIndex(prev => (prev + 1) % images.length);
@@ -56,10 +52,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
-      {/* Fondo dinámico */}
       <img src={images[bgIndex]} alt="Hero" className="hero-bg fade-bg" />
-
-      {/* Overlay */}
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
@@ -67,6 +60,14 @@ export default function Hero() {
         <p className="hero-subtitle">
           Soy <span className="typed">{text}</span>
         </p>
+        {/* Botón descargar CV */}
+        <a
+          href="/CV-Christian-Septiembre-2025.pdf"
+          download
+          className="hero-btn"
+        >
+          Descargar CV
+        </a>
       </div>
     </section>
   );
