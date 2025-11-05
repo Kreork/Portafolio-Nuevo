@@ -1,0 +1,77 @@
+@import "./colores.css";
+
+.skills-section {
+  padding: 4rem 2rem;
+  margin-left: 290px;
+  background: var(--bg-main);
+  min-height: 100vh;
+  transition: margin-left .3s ease;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-header h2 {
+  font-size: 2.4rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.skills-header p {
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.skills-category {
+  margin-bottom: 2.5rem;
+}
+
+.skills-category h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.skill {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  transition: .25s;
+}
+
+.skill svg {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 0 12px rgba(122, 63, 255, .35);
+}
+
+/* ✅ Cuando el menu hamburguesa se activa */
+@media (max-width: 768px) {
+  .skills-section {
+    margin-left: 0;
+    padding: 3rem 1rem;
+  }
+}

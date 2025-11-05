@@ -1,0 +1,94 @@
+@import "../styles/colores.css";
+
+.formacion-section {
+  padding: 5rem 2rem;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin-left: 290px;
+  transition: margin-left .3s ease;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title-container h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: .6rem;
+}
+
+.title-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.formacion-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.formacion-block {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 15px rgba(80, 0, 255, 0.15);
+  transition: .3s ease;
+}
+
+.formacion-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(138, 43, 226, 0.45);
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1.2rem;
+}
+
+.block-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.block-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.item {
+  margin-bottom: 1.8rem;
+}
+
+.item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.item-date {
+  font-size: .9rem;
+  color: var(--primary);
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .formacion-section {
+    margin-left: 0;
+    padding: 2.5rem 1.2rem;
+  }
+}

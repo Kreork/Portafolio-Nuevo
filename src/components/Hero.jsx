@@ -62,7 +62,7 @@ export default function Hero() {
         </p>
         {/* Botón descargar CV */}
         <a
-          href="/CV-Christian-Septiembre-2025.pdf"
+          href="/CV-Christian-Noviembre-2025.pdf"
           download
           className="hero-btn"
         >

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import {
   FaEnvelope, FaFileAlt, FaGithub,
-  FaHome, FaImages, FaLinkedin, FaUser
+  FaHome, FaImages, FaLaptopCode, FaLinkedin,
+  FaUser
 } from "react-icons/fa";
 import FotoPerfil from "../assets/images/chris.jpg";
 import "../assets/styles/Header.css";
@@ -12,7 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "resume", "portfolio", "contact"];
+      const sections = ["hero", "about", "formacion", "skills", "portfolio", "contact"];
       let current = "hero";
 
       for (let id of sections) {
@@ -57,8 +58,11 @@ export default function Header() {
           <a href="#about" onClick={closeMenu} className={activeSection === "about" ? "active" : ""}>
             <FaUser className="icon" /> Sobre mí
           </a>
-          <a href="#resume" onClick={closeMenu} className={activeSection === "resume" ? "active" : ""}>
-            <FaFileAlt className="icon" /> Resumen
+          <a href="#formacion" onClick={closeMenu} className={activeSection === "formacion" ? "active" : ""}>
+          <FaFileAlt className="icon" /> Formacion
+          </a>
+          <a href="#skills" onClick={closeMenu} className={activeSection === "skills" ? "active" : ""}>
+          <FaLaptopCode className="icon" /> Tecnologías
           </a>
           <a href="#portfolio" onClick={closeMenu} className={activeSection === "portfolio" ? "active" : ""}>
             <FaImages className="icon" /> Portafolio
