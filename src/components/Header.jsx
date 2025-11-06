@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  FaEnvelope, FaFileAlt, FaGithub,
+  FaFileAlt, FaGithub,
   FaHome, FaImages, FaLaptopCode, FaLinkedin,
   FaUser
 } from "react-icons/fa";
@@ -13,7 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "formacion", "skills", "portfolio", "contact"];
+      const sections = ["hero", "about", "formacion", "skills", "portfolio"];
       let current = "hero";
 
       for (let id of sections) {
@@ -66,9 +66,6 @@ export default function Header() {
           </a>
           <a href="#portfolio" onClick={closeMenu} className={activeSection === "portfolio" ? "active" : ""}>
             <FaImages className="icon" /> Portafolio
-          </a>
-          <a href="#contact" onClick={closeMenu} className={activeSection === "contact" ? "active" : ""}>
-            <FaEnvelope className="icon" /> Contacto
           </a>
         </nav>
       </header>
