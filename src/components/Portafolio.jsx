@@ -4,7 +4,7 @@ import "../assets/styles/Portafolio.css";
 import ChatBoot from "../assets/images/ChatBoot.jpeg";
 import LogoClaro from "../assets/images/logoClaro.png";
 import MediMapa from "../assets/images/MediMapa.png";
-import YoTeCuido from "../assets/images/YoTeCuido.jpg";
+import YoTeCuido from "../assets/images/YoteCuido.jpg";
 
 // Imágenes extra
 import Bio from "../assets/images/BioCollector/Fepro.jpg";
