@@ -53,6 +53,15 @@ return (
               Participé en procesos de implementación, pruebas y mejora de componentes backend.
             </p>
           </div>
+
+           <div className="item">
+            <h4 className="item-title">Instituto de Educación Digital del Estado de Puebla (IEDEP)· Analista</h4>
+            <span className="item-date">Noviembre 2025 — Actualidad</span>
+            <p>
+              Desarrollé e integré funcionalidades utilizando <strong>PhP</strong> bajo el modelo MVC,
+              aplicando principios de <strong>código limpio, documentación profesional</strong> y arquitectura modular.
+            </p>
+          </div>
         </div>
 
         {/* Logros */}
